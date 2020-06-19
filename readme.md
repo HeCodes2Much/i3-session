@@ -7,7 +7,6 @@ i3session
   <img src="https://img.shields.io/github/issues/TheCynicalTeam/i3session?color=violet&style=for-the-badge">
   <img src="https://img.shields.io/github/stars/TheCynicalTeam/i3session?style=for-the-badge">
   <img src="https://img.shields.io/github/forks/TheCynicalTeam/i3session?color=teal&style=for-the-badge">
-  <img src="https://github.com/TheCynicalTeam/i3session/blob/master/Swallow.gif">
 </p>
 
 `i3session` remembers what's running in your i3 workspaces by saving a session file (in ~/.i3/session).
