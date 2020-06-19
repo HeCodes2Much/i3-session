@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 
 import os
 import i3
@@ -70,7 +70,7 @@ class Node:
             Tree.sleep_until_changed()
         elif isinstance(self, Container):
             pass
-            
+
 class Workspace(Node): pass
 class Client(Node): pass
 class Container(Node): pass
@@ -89,8 +89,8 @@ class Tree():
             # Window ID is set for this client
             elif n['window']:
                 # get process from xprop
-                node = Node(n) 
-                n[u'process'] = node.get_wm_class()
+                node = Node(n)
+                n['process'] = node.get_wm_class()
 
         return nodes
 
@@ -99,15 +99,15 @@ class Tree():
     def restore(self, nodes, parent = None, only_workspace = None):
         for n in nodes:
             if 'num' in n:
-                node = Workspace(n, parent) 
+                node = Workspace(n, parent)
             elif 'process' in n:
-                node = Client(n, parent) 
+                node = Client(n, parent)
             else:
-                node = Container(n, parent) 
+                node = Container(n, parent)
 
             logging.debug(node)
             node.restore()
-            
+
             # Recurse subtree
             if node.has_children() == True:
                 if only_workspace and isinstance(node, Workspace) and str(node.data['num']) != only_workspace:
@@ -133,7 +133,7 @@ def nag_bar_process():
 
 # print usage instructions
 def show_help():
-    print(sys.argv[0] + " <save|restore> [workspace]")
+    print((sys.argv[0] + " <save|restore> [workspace]"))
 
 if __name__ == '__main__':
     # logging.basicConfig(level=logging.DEBUG)
@@ -152,24 +152,24 @@ if __name__ == '__main__':
         sys.exit(1)
 
     if sys.argv[1] == 'save':
-        print "Saving..."
+        print("Saving...")
         session = i3.get_tree()
 
         # traverse tree and assign node processes before storing
         if session['nodes']:
-            session['nodes'] = Tree.assign_processes(session['nodes']) 
+            session['nodes'] = Tree.assign_processes(session['nodes'])
 
         pickle.dump(session, open(config_file, "wb"))
-        print "Session saved to " + config_file
+        print("Session saved to " + config_file)
     elif sys.argv[1] == 'restore':
         nag_bar = nag_bar_process()
-        print "Restoring..."
+        print("Restoring...")
 
         # load session from file
         try:
             session = pickle.load(open(config_file, "rb"))
         except Exception:
-            print "Can't restore saved session..."
+            print("Can't restore saved session...")
             sys.exit(1)
 
         # traverse tree and send commands to i3 based on what was saved
@@ -177,10 +177,10 @@ if __name__ == '__main__':
             if len(sys.argv) > 2:
                 Tree.restore(session['nodes'], None, sys.argv[2])
             else:
-                Tree.restore(session['nodes']) 
+                Tree.restore(session['nodes'])
 
         nag_bar.terminate()
-        print "Session restored from " + config_file
+        print("Session restored from " + config_file)
     else:
         show_help()
         sys.exit(1)
