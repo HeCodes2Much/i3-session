@@ -1,7 +1,16 @@
 i3session
 =========
 
-`i3session` remembers what's running in your i3 workspaces by saving a session file (in ~/.i3/session). 
+<p align="center">
+  <img src="https://img.shields.io/badge/Maintained%3F-Yes-green?style=for-the-badge">
+  <img src="https://img.shields.io/github/license/TheCynicalTeam/i3session?style=for-the-badge">
+  <img src="https://img.shields.io/github/issues/TheCynicalTeam/i3session?color=violet&style=for-the-badge">
+  <img src="https://img.shields.io/github/stars/TheCynicalTeam/i3session?style=for-the-badge">
+  <img src="https://img.shields.io/github/forks/TheCynicalTeam/i3session?color=teal&style=for-the-badge">
+  <img src="https://github.com/TheCynicalTeam/i3session/blob/master/Swallow.gif">
+</p>
+
+`i3session` remembers what's running in your i3 workspaces by saving a session file (in ~/.i3/session).
 It is then able to restore the running processes (and their simple orientation) to one or more workspaces.
 
 Since `i3session` executes i3 commands sequentially (tree traversal), changing focus during restore will affect where clients open. By default, the `i3-nagbar` will appear during restore with a message to remind you of this.
