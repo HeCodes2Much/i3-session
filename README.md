@@ -47,3 +47,6 @@ Dependencies
 * i3-nagbar
 * xprop
 * PyXDG
+
+## License :scroll:
+This Project is licensed under the GPL-3.0 License. Check license file for more info.
