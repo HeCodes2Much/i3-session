@@ -84,10 +84,8 @@ class Tree():
     def assign_processes(self, nodes):
         for n in nodes:
             # Recurse subtree
-            if n['nodes']:
-                n['nodes'] = Tree.assign_processes(n['nodes'])
             # Window ID is set for this client
-            elif n['window']:
+            if n['window']:
                 # get process from xprop
                 node = Node(n)
                 n['process'] = node.get_wm_class()
