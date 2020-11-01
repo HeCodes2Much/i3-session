@@ -24,14 +24,6 @@ Saving a session
 	Session saved to ~/.i3/session
 
 
-Restoring an individual workspace
----------------------------------
-
-	% i3session restore 1
-	Restoring...
-	Session restored from ~/.i3/session
-
-
 Restoring all workspaces
 ------------------------
 
@@ -42,7 +34,8 @@ Restoring all workspaces
 Dependencies
 ------------
 
-* Python
+* python3
+* perl-anyevent-i3
 * i3-py (https://github.com/ziberna/i3-py)
 * i3-nagbar
 * xprop
