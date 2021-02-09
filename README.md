@@ -3,10 +3,10 @@ i3session
 
 <p align="center">
   <img src="https://img.shields.io/badge/Maintained%3F-Yes-green?style=for-the-badge">
-  <img src="https://img.shields.io/github/license/TheCynicalTeam/i3session?style=for-the-badge">
-  <img src="https://img.shields.io/github/issues/TheCynicalTeam/i3session?color=violet&style=for-the-badge">
-  <img src="https://img.shields.io/github/stars/TheCynicalTeam/i3session?style=for-the-badge">
-  <img src="https://img.shields.io/github/forks/TheCynicalTeam/i3session?color=teal&style=for-the-badge">
+  <img src="https://img.shields.io/github/license/The-Repo-Club/i3session?style=for-the-badge">
+  <img src="https://img.shields.io/github/issues/The-Repo-Club/i3session?color=violet&style=for-the-badge">
+  <img src="https://img.shields.io/github/stars/The-Repo-Club/i3session?style=for-the-badge">
+  <img src="https://img.shields.io/github/forks/The-Repo-Club/i3session?color=teal&style=for-the-badge">
 </p>
 
 `i3session` remembers what's running in your i3 workspaces by saving a session file (in ~/.i3/session).
